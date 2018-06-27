@@ -41,7 +41,7 @@ class SiftScience
             return $user->getSiftId();
         }
 
-        return $user->getAuthIdentifier();
+        return $user ? $user->getAuthIdentifier() : null;
     }
 
     /**
