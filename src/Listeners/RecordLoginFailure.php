@@ -17,7 +17,7 @@ class RecordLoginFailure extends RecordAuthAction
         $sift = $this->sift;
 
         $this->track('$login', [
-            '$user_id' => $sift->getUserId($event->user),
+            '$user_id' => (string) $sift->getUserId($event->user),
             '$session_id' => $sift::getSessionId($this->session),
             '$login_status' => '$failure'
         ]);
